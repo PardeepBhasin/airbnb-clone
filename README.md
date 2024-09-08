@@ -1,3 +1,11 @@
+Please create .env.local in root folder with below code changes
+
+## Start Code
+GOOGLE_CLIENT_ID=your_client-id
+GOOGLE_CLIENT_SECRET=your_client_secret
+## END CODE
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
