@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+.primary-header {
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+
+}
+
+.secondary-header {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  transform: scale(2.43, 1.75) translateY(58px);
+  transform-origin: 50% 0%;
+}
+
+.show-item .primary-header {
+  visibility: hidden;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), opacity 150ms 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0ms 125ms;
+  transform: scale(0.34, 0.727272) translateY(-58px);
+  transform-origin: 50% 50%;
+}
+
+.show-item .secondary-header {
+  left: 50%;
+  visibility: visible;
+  transform-origin: 50% 0%;
+  transform: translate(-50%, -50%);
+  top: 50px;
+}
+
+.show-item .main-header {
+  height: 105px;
+}
+
+.filter-header {
+  position: sticky;
+  top: 171px;
+  background: white;
+
+  @media screen and (max-width: 768px) {
+    top: 80px;
+  }
+}
+
+.show-item .filter-header {
+  top: 105px;
+}
+
+.content-section {
+  margin-top: 200px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 84px;
+  }
+}
